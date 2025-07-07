@@ -22,7 +22,7 @@ export default function SwappingPage() {
 
             <h2>Overview</h2>
             <p>
-                The token swapping system allows users to exchange SPL tokens on Solana using Jupiter's aggregated liquidity.
+                The token swapping system allows users to exchange SPL tokens on Solana using Jupiter&apos;s aggregated liquidity.
                 It features real-time quotes, customizable slippage, priority fees, and automatic platform fee collection.
             </p>
 
@@ -517,6 +517,8 @@ function PriceCard({ route, inputToken, outputToken }: PriceCardProps) {
                     <p className="text-sm text-gray-600">Send tokens via chat messages</p>
                 </a>
             </div>
+
+            <h2>Here&apos;s how the token swapping process works in detail.</h2>
         </div>
     );
 } 

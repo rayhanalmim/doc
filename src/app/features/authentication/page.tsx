@@ -1,61 +1,61 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Authentication System - Swop Docs',
-    description: 'Comprehensive guide to Swop authentication system with Privy integration',
+  title: 'Authentication System - Swop Docs',
+  description: 'Comprehensive guide to Swop authentication system with Privy integration',
 };
 
 export default function AuthenticationPage() {
-    return (
-        <div className="prose prose-gray max-w-none">
-            <h1>Authentication System</h1>
+  return (
+    <div className="prose prose-gray max-w-none">
+      <h1>Authentication System</h1>
 
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-                <div className="flex">
-                    <div className="ml-3">
-                        <p className="text-sm text-blue-700">
-                            Swop uses <strong>Privy Auth</strong> for secure wallet connection and user authentication across multiple blockchain networks.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <h2>Overview</h2>
-            <p>
-                The authentication system provides seamless wallet connection for both EVM chains (Ethereum, Polygon, Base)
-                and Solana. It handles user onboarding, wallet management, and secure session management.
+      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+        <div className="flex">
+          <div className="ml-3">
+            <p className="text-sm text-blue-700">
+              Swop uses <strong>Privy Auth</strong> for secure wallet connection and user authentication across multiple blockchain networks.
             </p>
+          </div>
+        </div>
+      </div>
 
-            <h2>Technology Stack</h2>
-            <ul>
-                <li><strong>Privy Auth</strong>: Primary authentication provider</li>
-                <li><strong>Ethers.js</strong>: EVM wallet interaction</li>
-                <li><strong>Solana Web3.js</strong>: Solana wallet interaction</li>
-                <li><strong>Next.js Server Auth</strong>: Server-side authentication</li>
-            </ul>
+      <h2>Overview</h2>
+      <p>
+        The authentication system provides seamless wallet connection for both EVM chains (Ethereum, Polygon, Base)
+        and Solana. It handles user onboarding, wallet management, and secure session management.
+      </p>
 
-            <h2>Supported Wallets</h2>
+      <h2>Technology Stack</h2>
+      <ul>
+        <li><strong>Privy Auth</strong>: Primary authentication provider</li>
+        <li><strong>Ethers.js</strong>: EVM wallet interaction</li>
+        <li><strong>Solana Web3.js</strong>: Solana wallet interaction</li>
+        <li><strong>Next.js Server Auth</strong>: Server-side authentication</li>
+      </ul>
 
-            <h3>EVM Wallets</h3>
-            <ul>
-                <li>MetaMask</li>
-                <li>WalletConnect</li>
-                <li>Coinbase Wallet</li>
-                <li>Embedded Wallets</li>
-            </ul>
+      <h2>Supported Wallets</h2>
 
-            <h3>Solana Wallets</h3>
-            <ul>
-                <li>Phantom</li>
-                <li>Solflare</li>
-                <li>Other Solana adapters</li>
-            </ul>
+      <h3>EVM Wallets</h3>
+      <ul>
+        <li>MetaMask</li>
+        <li>WalletConnect</li>
+        <li>Coinbase Wallet</li>
+        <li>Embedded Wallets</li>
+      </ul>
 
-            <h2>Implementation</h2>
+      <h3>Solana Wallets</h3>
+      <ul>
+        <li>Phantom</li>
+        <li>Solflare</li>
+        <li>Other Solana adapters</li>
+      </ul>
 
-            <h3>Privy Provider Setup</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
-                <code>{`// components/PrivyProvider.tsx
+      <h2>Implementation</h2>
+
+      <h3>Privy Provider Setup</h3>
+      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+        <code>{`// components/PrivyProvider.tsx
 import { PrivyProvider } from '@privy-io/react-auth';
 
 export default function CustomPrivyProvider({ children }: { children: React.ReactNode }) {
@@ -85,11 +85,11 @@ export default function CustomPrivyProvider({ children }: { children: React.Reac
     </PrivyProvider>
   );
 }`}</code>
-            </pre>
+      </pre>
 
-            <h3>Authentication Hook Usage</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
-                <code>{`// Using Privy authentication hooks
+      <h3>Authentication Hook Usage</h3>
+      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+        <code>{`// Using Privy authentication hooks
 import { usePrivy, useWallets, useSolanaWallets } from '@privy-io/react-auth';
 
 export function WalletConnection() {
@@ -115,11 +115,11 @@ export function WalletConnection() {
     </div>
   );
 }`}</code>
-            </pre>
+      </pre>
 
-            <h3>Server-Side Authentication</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
-                <code>{`// middleware.ts - Server-side auth verification
+      <h3>Server-Side Authentication</h3>
+      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+        <code>{`// middleware.ts - Server-side auth verification
 import { verifyToken } from '@privy-io/server-auth';
 
 export async function middleware(request: NextRequest) {
@@ -144,28 +144,28 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 }`}</code>
-            </pre>
+      </pre>
 
-            <h2>Authentication Flow</h2>
+      <h2>Authentication Flow</h2>
 
-            <div className="bg-gray-50 p-6 rounded-lg my-6">
-                <h4 className="text-lg font-semibold mb-4">Step-by-Step Process</h4>
-                <ol className="list-decimal list-inside space-y-2">
-                    <li>User clicks "Connect Wallet" button</li>
-                    <li>Privy modal opens with wallet options</li>
-                    <li>User selects preferred wallet (MetaMask, Phantom, etc.)</li>
-                    <li>Wallet prompts for connection approval</li>
-                    <li>Privy creates authenticated session</li>
-                    <li>User is redirected to dashboard</li>
-                    <li>Session persists across browser refreshes</li>
-                </ol>
-            </div>
+      <div className="bg-gray-50 p-6 rounded-lg my-6">
+        <h4 className="text-lg font-semibold mb-4">Step-by-Step Process</h4>
+        <ol className="list-decimal list-inside space-y-2">
+          <li>User clicks &quot;Connect Wallet&quot; button</li>
+          <li>Privy modal opens with wallet options</li>
+          <li>User selects preferred wallet (MetaMask, Phantom, etc.)</li>
+          <li>Wallet prompts for connection approval</li>
+          <li>Privy creates authenticated session</li>
+          <li>User is redirected to dashboard</li>
+          <li>Session persists across browser refreshes</li>
+        </ol>
+      </div>
 
-            <h2>Multi-Chain Support</h2>
+      <h2>Multi-Chain Support</h2>
 
-            <h3>Chain Configuration</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
-                <code>{`// types/config.ts - Supported chains
+      <h3>Chain Configuration</h3>
+      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+        <code>{`// types/config.ts - Supported chains
 export const CHAINS = {
   ETHEREUM: {
     id: 1,
@@ -198,52 +198,54 @@ export const CHAINS = {
     blockExplorer: 'https://solscan.io',
   },
 };`}</code>
-            </pre>
+      </pre>
 
-            <h2>Security Features</h2>
+      <h2>Security Features</h2>
 
-            <ul>
-                <li><strong>Token-based Authentication</strong>: Secure JWT tokens</li>
-                <li><strong>Session Management</strong>: Automatic session refresh</li>
-                <li><strong>Wallet Verification</strong>: Signature-based verification</li>
-                <li><strong>CSRF Protection</strong>: Built-in CSRF token validation</li>
-                <li><strong>Rate Limiting</strong>: API request rate limiting</li>
-            </ul>
+      <ul>
+        <li><strong>Token-based Authentication</strong>: Secure JWT tokens</li>
+        <li><strong>Session Management</strong>: Automatic session refresh</li>
+        <li><strong>Wallet Verification</strong>: Signature-based verification</li>
+        <li><strong>CSRF Protection</strong>: Built-in CSRF token validation</li>
+        <li><strong>Rate Limiting</strong>: API request rate limiting</li>
+      </ul>
 
-            <h2>Error Handling</h2>
+      <h2>Error Handling</h2>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
-                <h4 className="font-semibold text-yellow-800">Common Authentication Errors</h4>
-                <ul className="mt-2 text-yellow-700">
-                    <li><strong>Wallet Rejected</strong>: User rejected wallet connection</li>
-                    <li><strong>Network Mismatch</strong>: Wrong network selected in wallet</li>
-                    <li><strong>Session Expired</strong>: Authentication token expired</li>
-                    <li><strong>Wallet Locked</strong>: Wallet is locked or unavailable</li>
-                </ul>
-            </div>
+      <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+        <h4 className="font-semibold text-yellow-800">Common Authentication Errors</h4>
+        <ul className="mt-2 text-yellow-700">
+          <li><strong>Wallet Rejected</strong>: User rejected wallet connection</li>
+          <li><strong>Network Mismatch</strong>: Wrong network selected in wallet</li>
+          <li><strong>Session Expired</strong>: Authentication token expired</li>
+          <li><strong>Wallet Locked</strong>: Wallet is locked or unavailable</li>
+        </ul>
+      </div>
 
-            <h2>Best Practices</h2>
+      <h2>Best Practices</h2>
 
-            <ul>
-                <li>Always check authentication status before wallet operations</li>
-                <li>Handle wallet disconnection gracefully</li>
-                <li>Provide clear error messages for failed connections</li>
-                <li>Implement retry logic for network failures</li>
-                <li>Cache user preferences for better UX</li>
-            </ul>
+      <ul>
+        <li>Always check authentication status before wallet operations</li>
+        <li>Handle wallet disconnection gracefully</li>
+        <li>Provide clear error messages for failed connections</li>
+        <li>Implement retry logic for network failures</li>
+        <li>Cache user preferences for better UX</li>
+      </ul>
 
-            <h2>Next Steps</h2>
+      <h2>Next Steps</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                <a href="/features/wallet" className="block p-4 border rounded-lg hover:bg-gray-50">
-                    <h3 className="font-semibold text-blue-600">Wallet Management →</h3>
-                    <p className="text-sm text-gray-600">Learn about multi-chain wallet functionality</p>
-                </a>
-                <a href="/features/swapping" className="block p-4 border rounded-lg hover:bg-gray-50">
-                    <h3 className="font-semibold text-blue-600">Token Swapping →</h3>
-                    <p className="text-sm text-gray-600">Explore Jupiter Exchange integration</p>
-                </a>
-            </div>
-        </div>
-    );
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <a href="/features/wallet" className="block p-4 border rounded-lg hover:bg-gray-50">
+          <h3 className="font-semibold text-blue-600">Wallet Management →</h3>
+          <p className="text-sm text-gray-600">Learn about multi-chain wallet functionality</p>
+        </a>
+        <a href="/features/swapping" className="block p-4 border rounded-lg hover:bg-gray-50">
+          <h3 className="font-semibold text-blue-600">Token Swapping →</h3>
+          <p className="text-sm text-gray-600">Explore Jupiter Exchange integration</p>
+        </a>
+      </div>
+
+      <div>Learn more about &quot;Sign in with Email&quot; and &quot;Sign in with Wallet&quot; options.</div>
+    </div>
+  );
 } 

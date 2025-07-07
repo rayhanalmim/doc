@@ -1,4 +1,4 @@
-import { Wallet, Shield, Coins, MessageSquare, Database, BarChart3, Sparkles, ArrowRight } from 'lucide-react';
+import { Wallet, Shield, Coins, MessageSquare, Database, Sparkles, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -52,10 +52,10 @@ export default function HomePage() {
                         Quick Start Guide
                     </Link>
                     <Link
-                        href="/getting-started/installation"
+                        href="/getting-started/configuration"
                         className="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300"
                     >
-                        Installation Guide
+                        Configuration Guide
                         <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                 </div>
@@ -97,15 +97,15 @@ export default function HomePage() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/getting-started/installation" className="flex items-center text-gray-600 hover:text-blue-600">
-                                <ArrowRight className="w-4 h-4 mr-2" />
-                                Installation Guide
-                            </Link>
-                        </li>
-                        <li>
                             <Link href="/getting-started/configuration" className="flex items-center text-gray-600 hover:text-blue-600">
                                 <ArrowRight className="w-4 h-4 mr-2" />
                                 Configuration Guide
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/architecture/overview" className="flex items-center text-gray-600 hover:text-blue-600">
+                                <ArrowRight className="w-4 h-4 mr-2" />
+                                System Architecture
                             </Link>
                         </li>
                     </ul>

@@ -10,13 +10,9 @@ import {
   ArrowRight,
   Github,
   Star,
-  Users,
-  Globe,
   Layers,
   BookOpen,
   Sparkles,
-  TrendingUp,
-  Lock,
   Rocket
 } from 'lucide-react';
 
@@ -111,12 +107,12 @@ export default function HomePage() {
     },
   ];
 
-  const stats = [
-    { label: 'Active Users', value: '50K+', icon: <Users className="w-5 h-5" /> },
-    { label: 'Transactions', value: '$10M+', icon: <TrendingUp className="w-5 h-5" /> },
-    { label: 'Networks', value: '4', icon: <Globe className="w-5 h-5" /> },
-    { label: 'Security Score', value: '99%', icon: <Lock className="w-5 h-5" /> },
-  ];
+  // const stats = [
+  //   { label: 'Active Users', value: '50K+', icon: <Users className="w-5 h-5" /> },
+  //   { label: 'Transactions', value: '$10M+', icon: <TrendingUp className="w-5 h-5" /> },
+  //   { label: 'Networks', value: '4', icon: <Globe className="w-5 h-5" /> },
+  //   { label: 'Security Score', value: '99%', icon: <Lock className="w-5 h-5" /> },
+  // ];
 
   return (
     <div className="min-h-screen">
