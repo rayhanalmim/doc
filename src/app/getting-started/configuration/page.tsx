@@ -1,4 +1,4 @@
-import { Cog, Shield, Database, MessageSquare, CreditCard, Wallet, Globe, Map } from 'lucide-react';
+import { Cog, Shield, Database, MessageSquare, CreditCard, Globe, Map } from 'lucide-react';
 
 export default function ConfigurationPage() {
     return (

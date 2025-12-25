@@ -1,4 +1,4 @@
-import { ArrowRight, Key, Wallet, Globe, CreditCard, Download, Terminal, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Key, Wallet, Globe, CreditCard, Download, Terminal } from 'lucide-react';
 import Link from 'next/link';
 
 export default function QuickStartPage() {
@@ -126,7 +126,7 @@ npm run dev-with-xmtp`}</code></pre>
                     <Wallet className="w-6 h-6 text-blue-600 mt-1" />
                     <div>
                         <h3 className="text-lg font-semibold mb-2">Privy Embedded Wallet</h3>
-                        <p>Swop uses Privy's embedded wallet system for secure authentication and wallet management:</p>
+                        <p>Swop uses Privy&apos;s embedded wallet system for secure authentication and wallet management:</p>
                         <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{`import { usePrivy, useWallets } from '@privy-io/react-auth';
 
 // Access authentication state
