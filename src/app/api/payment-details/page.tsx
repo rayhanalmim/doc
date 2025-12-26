@@ -120,56 +120,104 @@ export default function PaymentDetailsPage() {
       <h3>Success Response (200)</h3>
       <pre><code>{successResponse}</code></pre>
 
-      <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 my-6 not-prose">
-        <h4 className="font-semibold mb-4">Response Fields Explained</h4>
+      <div className="my-8 not-prose">
+        <div className="mb-6">
+          <h4 className="text-xl font-bold text-gray-900 mb-2">Response Fields Explained</h4>
+          <p className="text-sm text-gray-600">Detailed breakdown of all fields returned in the payment details response</p>
+        </div>
         
-        <div className="space-y-6">
-          <div>
-            <h5 className="font-medium text-sm mb-2">Payment Info</h5>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-              <div className="flex gap-2">
-                <code className="text-pink-600">payment_id</code>
-                <span className="text-gray-500">- Unique payment identifier</span>
+        <div className="space-y-4">
+          {/* Payment Info Card */}
+          <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-pink-200 hover:shadow-lg transition-all">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center shadow-lg shadow-pink-500/25">
+                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <div className="flex gap-2">
-                <code className="text-pink-600">amount</code>
-                <span className="text-gray-500">- Net amount after fees</span>
+              <h5 className="text-lg font-bold text-gray-900">Payment Info</h5>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 hover:bg-pink-50 transition-colors">
+                <code className="text-sm font-mono font-semibold text-pink-600 bg-pink-100 px-2 py-1 rounded">payment_id</code>
+                <span className="text-sm text-gray-600 leading-relaxed">Unique payment identifier</span>
               </div>
-              <div className="flex gap-2">
-                <code className="text-pink-600">transaction_fee</code>
-                <span className="text-gray-500">- Applied transaction fee</span>
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 hover:bg-pink-50 transition-colors">
+                <code className="text-sm font-mono font-semibold text-pink-600 bg-pink-100 px-2 py-1 rounded">amount</code>
+                <span className="text-sm text-gray-600 leading-relaxed">Net amount after fees</span>
               </div>
-              <div className="flex gap-2">
-                <code className="text-pink-600">currency</code>
-                <span className="text-gray-500">- Store currency code</span>
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 hover:bg-pink-50 transition-colors">
+                <code className="text-sm font-mono font-semibold text-pink-600 bg-pink-100 px-2 py-1 rounded">transaction_fee</code>
+                <span className="text-sm text-gray-600 leading-relaxed">Applied transaction fee</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 hover:bg-pink-50 transition-colors">
+                <code className="text-sm font-mono font-semibold text-pink-600 bg-pink-100 px-2 py-1 rounded">currency</code>
+                <span className="text-sm text-gray-600 leading-relaxed">Store currency code</span>
               </div>
             </div>
           </div>
 
-          <div>
-            <h5 className="font-medium text-sm mb-2">Status Values</h5>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700">pending</span>
-              <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">completed</span>
-              <span className="px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-700">failed</span>
-              <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700">refunded</span>
-              <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">expired</span>
+          {/* Status Values Card */}
+          <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-purple-200 hover:shadow-lg transition-all">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/25">
+                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h5 className="text-lg font-bold text-gray-900">Status Values</h5>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-yellow-50 border border-yellow-200 hover:shadow-md transition-all">
+                <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+                <span className="text-sm font-semibold text-yellow-700">pending</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-green-50 border border-green-200 hover:shadow-md transition-all">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                <span className="text-sm font-semibold text-green-700">completed</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-50 border border-red-200 hover:shadow-md transition-all">
+                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                <span className="text-sm font-semibold text-red-700">failed</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-50 border border-blue-200 hover:shadow-md transition-all">
+                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                <span className="text-sm font-semibold text-blue-700">refunded</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-50 border border-gray-200 hover:shadow-md transition-all">
+                <span className="w-2 h-2 rounded-full bg-gray-500"></span>
+                <span className="text-sm font-semibold text-gray-700">expired</span>
+              </div>
             </div>
           </div>
 
-          <div>
-            <h5 className="font-medium text-sm mb-2">User Object</h5>
-            <p className="text-sm text-gray-500">
-              Contains information about the Tahweel user who made the payment. 
-              Only populated after a successful payment.
+          {/* User Object Card */}
+          <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-blue-200 hover:shadow-lg transition-all">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h5 className="text-lg font-bold text-gray-900">User Object</h5>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed pl-13">
+              Contains information about the Tahweel user who made the payment. Only populated after a successful payment.
             </p>
           </div>
 
-          <div>
-            <h5 className="font-medium text-sm mb-2">Webhook Object</h5>
-            <p className="text-sm text-gray-500">
-              Contains webhook delivery information including the URL, timestamp of the call, 
-              and the response received from your server.
+          {/* Webhook Object Card */}
+          <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-indigo-200 hover:shadow-lg transition-all">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h5 className="text-lg font-bold text-gray-900">Webhook Object</h5>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed pl-13">
+              Contains webhook delivery information including the URL, timestamp of the call, and the response received from your server.
             </p>
           </div>
         </div>

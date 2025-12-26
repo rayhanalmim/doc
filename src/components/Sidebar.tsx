@@ -280,7 +280,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                                         sizes="48px"
                                     />
                                 </div>
-                                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+                                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full border-2 border-white shadow-lg shadow-pink-500/30"></div>
                             </div>
                             <div>
                                 <h1 className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
@@ -337,11 +337,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 {/* Status Box - At bottom inside sidebar */}
                 <div className="border-t border-gray-200 p-6">
                     <div className="bg-gradient-to-r from-gray-50 to-pink-50 p-4 rounded-xl border border-gray-200">
-                        <div className="flex items-center space-x-2 mb-2">
-                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span className="text-xs font-medium text-gray-600">Status</span>
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="flex items-center space-x-2">
+                                <div className="w-2.5 h-2.5 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full shadow-sm shadow-pink-500/30"></div>
+                                <span className="text-xs font-semibold text-gray-700">System Status</span>
+                            </div>
+                            <span className="px-2 py-0.5 text-[10px] font-bold bg-pink-100 text-pink-700 rounded-full">Live</span>
                         </div>
-                        <p className="text-xs text-gray-500">All systems operational</p>
+                        <p className="text-xs text-gray-600 font-medium">All systems operational</p>
                     </div>
                 </div>
             </aside>

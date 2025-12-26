@@ -274,7 +274,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span>Production data</span>
+                  <span>Production API credentials</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500" />
@@ -303,7 +303,7 @@ export default function HomePage() {
 
               <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 rounded-2xl p-4 mb-6">
                 <code className="text-orange-800 font-mono text-lg block break-all">
-                  https://connect.tahweelbuild.site
+                  https://connect.tahweel.io
                 </code>
               </div>
 
@@ -314,7 +314,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-orange-500" />
-                  <span>Test data only</span>
+                  <span>Sandbox API credentials</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-orange-500" />
@@ -322,6 +322,13 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-2xl p-6 text-center">
+            <p className="text-purple-800 font-medium">
+              💡 <strong>Same URL, Different Keys:</strong> Both environments use the same API endpoint. 
+              The environment is automatically detected based on which API credentials you use.
+            </p>
           </div>
 
 

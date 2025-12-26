@@ -159,7 +159,7 @@ export default function CreatePaymentPage() {
           </div>
           <div className="flex gap-4">
             <code className="text-pink-600 bg-pink-50 px-2 py-1 rounded">qr_code</code>
-            <span className="text-gray-600">QR code string for generating a scannable QR image.</span>
+            <span className="text-gray-600">A QR code number will be sent, which needs to be converted to a scannable QR Code.</span>
           </div>
           <div className="flex gap-4">
             <code className="text-pink-600 bg-pink-50 px-2 py-1 rounded">instructions</code>
